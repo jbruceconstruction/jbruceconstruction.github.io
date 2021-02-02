@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:visited, a:hover a:active {
+    color: inherit;
+    text-decoration: none;
+    position: relative
+  }  
+
+a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.1vw;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+.black::before{
+    background-color: black;
+}
+
+.white::before{
+    background-color: white;
+}
+
+/* desktop site */
+.landing{
+    position: relative;
+    overflow: hidden;
+    height: 48vw;
+    width: 100%;
+}
+
+.landingImage{
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    filter: brightness(30%)
+}
+
+.navBar{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    right: 2vw;
+    top: 2vw;
+    justify-content: flex-end;
+    width: 46%;
+}
+
+.navBarContainers{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.3vw;
+    color: white;
+    text-align: center;
+    padding-left: 0%;
+    padding-right: 5%;
+}
+
+.navBarLanguage{
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;  
+    padding-right: 0%;
+}
+
+.imageDiv{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    flex-direction: column;
+    transform: translate(0, 1vw);
+}
+
+.titleImage{
+    position: relative;
+    -webkit-filter: invert(1); /* safari 6.0 - 9.0 */
+    filter: invert(1);
+    z-index: 1;
+    height: 20vw;
+}
+
+.titleText{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.5vw;
+    color:white;
+    z-index: 1;
+}
+
+.divider{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 0.5vw;
+}
+
+.shortSummary{
+    position: relative;
+    overflow: hidden;
+    height: 100vw;
+    width: 100%;
+    background-color: black;
+}
+
+.nav{
+    position: relative;
+    width: 100%;
+    height: 5vw;
+    background-color: rgba(255,255,255,0);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  
+    flex-direction: row;
+    z-index: -1;
+}
+
+.addNav{
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255,255,255,0.7);
+    -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.5s; /* Firefox < 16 */
+    -ms-animation: fadein 0.5s; /* Internet Explorer */
+    -o-animation: fadein 0.5s; /* Opera < 12.1 */
+    animation: fadein 0.5s;
+}
+
+.navText{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  
+    flex-direction: row;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2vw;
+    color: black;
+    text-align: center;
+    padding-right: 2%
+}
+
+.previousWork{
+    width: 100%;
+    height: 15vw;
+    background-color: #202020;
+}
+/* end desktop site */
